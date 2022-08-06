@@ -1,27 +1,39 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hallo"),
+          title: Text('Layout Widget'),
         ),
-        body: Center(
-          child: Text(
-              'Konten 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
-          textAlign: TextAlign.justify,
-          style: TextStyle(
-            backgroundColor: Colors.orangeAccent
-          )),
+        body: Column(
+          children: [
+            Container(
+              width: 200,
+              height: 50,
+              color: Colors.green,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.blueAccent,
+            ),
+            Container(
+              width: 100,
+              height: 50,
+              color: Colors.red,
+            ),
+          ],
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
         ),
       ),
     );
