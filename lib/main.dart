@@ -31,6 +31,11 @@ class MyApp extends StatelessWidget {
               height: 50,
               color: Colors.red,
             ),
+            Container(
+              width: 400,
+              height: 50,
+              color: Colors.yellow,
+            ),
           ],
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
